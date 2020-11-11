@@ -20,21 +20,21 @@ console.log(parseInt(eta));
 
 // prezzo scontato over 65
 if ( eta > 65) {
-  var prezzo = (distanza * 0.21) - ((distanza * 0.21) * 0.4 );
+  var prezzo = Math.floor( (distanza * 0.21) - ((distanza * 0.21) * 0.4 ));
   document.getElementById('prezzoBiglietto').innerHTML = prezzo + "€";
   console.log(parseInt(prezzo));
 }
 
 // prezzo scontato minorenni
 else if (eta < 18) {
-  var prezzo = (distanza * 0.21) - ((distanza * 0.21) * 0.2);
+  var prezzo = Math.floor( (distanza * 0.21) - ((distanza * 0.21) * 0.2));
   document.getElementById('prezzoBiglietto').innerHTML = prezzo + "€";
   console.log(parseInt(prezzo));
 }
 
 // prezzo pieno
 else {
-  var prezzo = (distanza * 0.21);
+  var prezzo = Math.floor( (distanza * 0.21));
   document.getElementById('prezzoBiglietto').innerHTML = prezzo + "€";
   console.log(parseInt(prezzo));
 }
